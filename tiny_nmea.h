@@ -30,4 +30,6 @@ typedef struct nmea_coordinates {
 bool nmea_checksum_ok(char* nmea_line, uint8_t nmea_length);
 int nmea_parse(nmea_coordinates_t* coords, struct tm* stm, int32_t* speed, char* nmea_line, uint8_t nmea_length);
 
+uint32_t nmea_haversine(int32_t lat1, int32_t lon1, int32_t lat2, int32_t lon2);
+
 #endif // TINY_NMEA_H
